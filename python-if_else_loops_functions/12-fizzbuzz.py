@@ -5,9 +5,9 @@ def fizbuzz():
             print("Fizzbuzz", end=" ")
             continue
         elif a % 5 == 0:
-             print("Buzz", end=" ")
-             continue
+            print("Buzz", end=" ")
+            continue
         elif a % 3 == 0:
             print("Fizz", end=" ")
             continue
-print(a, end=" ")
+     print(a, end=" ")
