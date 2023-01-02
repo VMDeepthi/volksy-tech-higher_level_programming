@@ -8,6 +8,6 @@ def fizbuzz():
              print("Buzz", end=" ")
              continue
         elif a % 3 == 0:
-            print("Fizz", end=" "))
+            print("Fizz", end=" ")
             continue
         print(a, end=" ")
