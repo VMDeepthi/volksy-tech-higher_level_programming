@@ -9,4 +9,4 @@ for fizzbuzz in range(101):
     elif fizzbuzz % 5 == 0:
         print("buzz")
         continue
-    print(fizzbuzz)
+print(fizzbuzz)
