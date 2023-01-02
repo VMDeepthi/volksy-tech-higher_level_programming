@@ -10,4 +10,4 @@ def fizbuzz():
         elif a % 3 == 0:
             print("Fizz", end=" ")
             continue
-        print(a, end=" ")
+    print(a, end=" ")
