@@ -4,4 +4,4 @@ def uppercase(str):
     res = ''
     for i in str:
         res = res + chr(ord(i) - 32)
-    return res
+    print ('{}'. format(res))
