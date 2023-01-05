@@ -1,8 +1,3 @@
 #!/usr/bin/python3
-def no_c(my_string):
-    lst=[]
-    for x in my_string:
-        if x!= 'c' and x != 'C':
-            lst.append(x)
-    print(lst)
-    return("".join(lst))
+def no_c(my_string):   
+    return(''.join(c for c in my_string if c not in 'cC'))
