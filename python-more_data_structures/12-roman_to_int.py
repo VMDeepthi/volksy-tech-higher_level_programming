@@ -19,7 +19,6 @@ def roman_to_int(roman_string):
         "D": 500,
         "M": 1000
     }
-
     result = 0
     temp = list(roman_string)
     # Concat 4 and 9s
