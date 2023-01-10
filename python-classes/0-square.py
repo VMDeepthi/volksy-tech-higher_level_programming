@@ -1,5 +1,7 @@
-#!/usr/bin/python3
-     '''Square task'''
+0 square #!/usr/bin/python3
+"""square"""
+
+
 class Square:
-    """Empty class that defines a square"""
+    """empty"""
     pass
