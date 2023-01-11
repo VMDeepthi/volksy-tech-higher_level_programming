@@ -4,7 +4,7 @@
 
 class Square:
     """size"""
-    def _init_(self, size=0):
+    def __init__(self, size=0):
         self.size = size
 
     @property
