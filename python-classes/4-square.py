@@ -2,7 +2,6 @@
 """Square Executable file"""
 
 
-
 class Square:
 """Defines a square"""
 
