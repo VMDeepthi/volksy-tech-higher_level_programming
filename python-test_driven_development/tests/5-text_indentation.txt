@@ -57,7 +57,7 @@ No special char in string input:
     hello
 
 QA case:
-    >>> text_indentation("Holberton. School? How are you: John")
+    >>> text_indentation("Holberton. School? How are you:    John")
     Holberton.
     <BLANKLINE>
     School?
