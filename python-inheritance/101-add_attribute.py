@@ -3,4 +3,5 @@
 
 def add_attribute(obj, attr, value):
     """ adds new attribute """
+
     obj.attr = value
