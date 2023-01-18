@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Module for saving to json"""
+
+
 import json
 import os.path
 import sys
