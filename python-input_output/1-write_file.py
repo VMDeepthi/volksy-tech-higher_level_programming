@@ -2,7 +2,7 @@
 """write file"""
 
 
-def number__of__lines(filename=""):
-    """files"""
+def number_of_lines(filename=""):
+    """file"""
     with open(filename, "r", encoding="UTF-8") as f:
         return len(list(f))
