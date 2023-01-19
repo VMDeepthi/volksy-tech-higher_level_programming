@@ -2,8 +2,9 @@
 """text indent"""
 
 
-def text__indentation(text):
+def text_indentation(text):
     """text indent"""
+
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
