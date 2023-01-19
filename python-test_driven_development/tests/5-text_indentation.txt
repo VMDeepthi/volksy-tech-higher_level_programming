@@ -1,109 +1,55 @@
-Test all delimeter with spaces at ends:
->>> text_indentation("Hello   :     Holberton    ?    school.    fooo     ")
-Hello:
-<BLANKLINE>
-Holberton?
-<BLANKLINE>
-school.
-<BLANKLINE>
-fooo
-Test just delimeter:
->>> text_indentation(".?:")
-.
-<BLANKLINE>
-?
-<BLANKLINE>
-:
-<BLANKLINE>
-Test string with the spaces:
->>> text_indentation("    Holberton")
-Holberton
-Test just delimeters:
->>> text_indentation("  ?  ")
-?
-<BLANKLINE>
-Test nonindent inside indent
->>> text_indentation("?Hello.")
-?
-<BLANKLINE>
-Hello.
-<BLANKLINE>
-Test existing newline:
->>> text_indentation("?\n\n.\n\n:")
-?
-<BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
-.
-<BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
-:
-<BLANKLINE>
-Test none:
->>> text_indentation(None)
-Traceback (most recent call last):
-...
-TypeError: text must be a string
-Test num:
->>> text_indentation(33)
-Traceback (most recent call last):
-...
-TypeError: text must be a string
-Test string with some spaces:
->>> text_indentation("        Holberton          ")
-Holberton
-Test string with an empty string:
->>> text_indentation("")
-Test string with an empty string (2):
->>> text_indentation("      ")
-Test:
->>> text_indentation("Hello: Holberton")
-Hello:
-<BLANKLINE>
-Holberton
-Test delimeters with spaces:
->>> text_indentation("      ?:  :  ")
-?
-<BLANKLINE>
-:
-<BLANKLINE>
-:
-<BLANKLINE>
-Test newline:
->>> text_indentation("\n")
-<BLANKLINE>
-Test newlines:
->>> text_indentation("\n\n")
-<BLANKLINE>
-<BLANKLINE>
-Test newline 3:
->>> text_indentation("Hello\n\n")
-Hello
-<BLANKLINE>
-Import module:
+The ``text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+Write a function that prints My name is <first name> <last name>
+
+    Prototype: def text_indentation(first_name, last_name=""):
+    first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
+    You are not allowed to import any module
+
 >>> text_indentation = __import__('5-text_indentation').text_indentation
-Test no delimeters:
->>> text_indentation("Hello Holberton")
-Hello Holberton
-Test string with spaces:
->>> text_indentation("Holberton    ")
-Holberton
-Test all delimeters!:
->>> text_indentation("Hello: Holberton? school. fooo")
-Hello:
+>>> text = "hola.soy Norman. mi apellido? Isaza."
+>>> text_indentation(text)
+hola.
 <BLANKLINE>
-Holberton?
+soy Norman.
 <BLANKLINE>
-school.
+mi apellido?
 <BLANKLINE>
-fooo
-Test all delimeters with some spaces:
->>> text_indentation("Hello   :   Holberton  ?  school.  fooo")
-Hello:
+Isaza.
 <BLANKLINE>
-Holberton?
+>>> text = "hola.soy Norman: mi apellido? Isaza."
+>>> text_indentation(text)
+hola.
 <BLANKLINE>
-school.
+soy Norman:
 <BLANKLINE>
-fooo
+mi apellido?
+<BLANKLINE>
+Isaza.
+<BLANKLINE>
+>>> text = 5
+>>> text_indentation(text)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 5, in text_indentation
+TypeError: text must be a string
+>>> text = "5"
+>>> text_indentation(text)
+5
+>>> text = "hola.    soy Norman.   quieres saber mi apellido?  es: Isaza.   "
+>>> text_indentation(text)
+hola.
+<BLANKLINE>
+soy Norman.
+<BLANKLINE>
+quieres saber mi apellido?
+<BLANKLINE>
+es:
+<BLANKLINE>
+Isaza.
+<BLANKLINE>
+>>>
