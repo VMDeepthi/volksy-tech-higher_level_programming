@@ -11,7 +11,6 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """constructore"""
         self.width = width
         self.height = height
         self.x = x
@@ -20,6 +19,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """width"""
         return self.__width
 
     @width.setter
