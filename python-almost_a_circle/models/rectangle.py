@@ -40,9 +40,14 @@ class Rectangle(Base):
     @property
     def x(self):
         """x"""
-        return self.x
+        return self.__x
 
     @x.setter
     def x(self, value):
         """x"""
-        self.__height = value 
+        self.__x = value
+
+    @property
+    def y(self):
+        """y"""
+        self.__y = value
