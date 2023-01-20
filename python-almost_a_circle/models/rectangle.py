@@ -21,7 +21,6 @@ class Rectangle:
         super().__init__(id)
 
     @property
-    """width"""
     def width(self):
         return self.__width
 
