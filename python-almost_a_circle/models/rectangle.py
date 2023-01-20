@@ -10,7 +10,7 @@ class Rectangle(Base):
     and class attribute print_symbol which is used as symbol for printing.
     """
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """constructore"""
         self.width = width
         self.height = height
