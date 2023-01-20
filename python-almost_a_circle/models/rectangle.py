@@ -32,7 +32,7 @@ class Rectangle(Base):
         else:
             self.__width = value
 
-   @property
+    @property
     def height(self):
         """height"""
         return self.__height
