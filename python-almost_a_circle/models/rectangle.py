@@ -3,7 +3,7 @@
 from base import Base
 
 
-class Rectangle:
+class Rectangle(Base):
     """A Rectangle class with attributes width and height,
     methods area, perimeter, print, str, repr, and del, and
     class attribute number_of_instances that keeps track of # of instances,
