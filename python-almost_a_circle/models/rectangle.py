@@ -97,3 +97,9 @@ class Rectangle(Base):
         """it overriding the __str__ method"""
         return ("[Rectangle] ({}) {}/{} - {}/{}".format
                 (self.id, self.x, self.y, self.width, self.height))
+
+    def display(self):
+        """Rectangle instance with the character #."""
+        print('\n' * self.y, end='')
+        for height in range(self.height):
+            print(' ' * self.x + '#' * self.width)
