@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module provides a Rectangle class."""
-from base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -9,8 +9,6 @@ class Rectangle(Base):
     class attribute number_of_instances that keeps track of # of instances,
     and class attribute print_symbol which is used as symbol for printing.
     """
-
-    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """constructore"""
