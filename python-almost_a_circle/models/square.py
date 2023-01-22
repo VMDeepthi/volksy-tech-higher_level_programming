@@ -11,8 +11,9 @@ class Square(Rectangle):
 
         super().__init__(size, size, x, y, id)
 
-def _str_(self):
+def __str__(self):
     """return string representation of Rectangle"""
-    return '[' + type(self)._name_ + '] (' + str(self.id) \
+
+    return'[' + type(self)._name_ + '] (' + str(self.id) \
             + ') ' + str(self.x) + '/' + str(self.y) + ' - ' \
             + str(self.size)        
