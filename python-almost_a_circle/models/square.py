@@ -57,4 +57,4 @@ class Square(Rectangle):
         x = self.x
         y = self.y
         dic = {'id': i, 'size': w, 'x': x, 'y': y}
-        return dic    
+        return dic
