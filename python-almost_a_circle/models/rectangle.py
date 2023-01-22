@@ -1,113 +1,122 @@
 #!/usr/bin/python3
-"""This module provides a Rectangle class."""
+""" rectangle module contains class Rectangle """
+
+
 from models.base import Base
 
 
 class Rectangle(Base):
-    """A Rectangle class with attributes width and height,
-    methods area, perimeter, print, str, repr, and del, and
-    class attribute number_of_instances that keeps track of # of instances,
-    and class attribute print_symbol which is used as symbol for printing.
-    """
+    """ rectangle clase for rectangle class """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """ init with arguments and __init__ from Base """
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
-        super().__init__(id)
 
     @property
     def width(self):
-        """width"""
+        """ getter method for width """
         return self.__width
-
-    @width.setter
-    def width(self, value):
-        """width"""
-        if type(value) != int:
-            raise TypeError("width must be an integer")
-        elif value <= 0:
-            raise ValueError("width must be > 0")
-        else:
-            self.__width = value
 
     @property
     def height(self):
-        """height"""
+        """ getter method for height """
         return self.__height
-
-    @height.setter
-    def height(self, value):
-        """height"""
-        if type(value) != int:
-            raise TypeError("height must be an integer")
-        elif value <= 0:
-            raise ValueError("height must be > 0")
-        else:
-            self.__height = value
 
     @property
     def x(self):
-        """x"""
+        """ getter method for x """
         return self.__x
-
-    @x.setter
-    def x(self, value):
-        """x"""
-        if type(value) != int:
-            raise TypeError("x must be an integer")
-        elif value < 0:
-            raise ValueError("x must be >= 0")
-        else:
-            self.__x = value
 
     @property
     def y(self):
-        """y"""
+        """ getter method for y """
         return self.__y
+
+    @width.setter
+    def width(self, value):
+        if type(value) != int:
+            raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+
+    @height.setter
+    def height(self, value):
+        if type(value) != int:
+            raise TypeError("height must be an integer")
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
+
+    @x.setter
+    def x(self, value):
+        if type(value) != int:
+            raise TypeError("x must be an integer")
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
 
     @y.setter
     def y(self, value):
-        """y"""
         if type(value) != int:
             raise TypeError("y must be an integer")
-        elif value < 0:
+        if value < 0:
             raise ValueError("y must be >= 0")
-        else:
-            self.__y = value
+        self.__y = value
 
     def area(self):
-        """return area of rectangle"""
-        return self.width * self.height
+        """ returns the area of rectangle """
+        return self.__height * self.__width
 
     def display(self):
-        """it prints in stdout the rectangle"""
-        if self.width == 0 or self.height == 0:
-            print("")
-            return
-        for i in range(self.y):
-            print("")
-        for i in range(self.height):
-            [print(" ", end="") for j in range(self.x)]
-            [print("#", end="") for k in range(self.width)]
-            print("")
+        """ prints the rectangle using # """
+        for i in range(self.__y):
+            print()
+        for i in range(self.__height):
+            print(" " * self.__x, end="")
+            print("#" * self.__width)
 
     def __str__(self):
-        """it overriding the __str__ method"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format
-                (self.id, self.x, self.y, self.width, self.height))
-
-    def display(self):
-        """Rectangle instance with the character #."""
-        print('\n' * self.y, end='')
-        for height in range(self.height):
-            print(' ' * self.x + '#' * self.width)
+        """ change str representantion when print object """
+        id_str = str(self.id)
+        w_str = str(self.__width)
+        h_str = str(self.__height)
+        x_str = str(self.__x)
+        y_str = str(self.__y)
+        div_str = x_str + '/' + y_str + ' - ' + w_str + '/' + h_str
+        return ("[Rectangle] " + '(' + id_str + ') ' + div_str)
 
     def update(self, *args, **kwargs):
-        """assigns an argument to each attribute"""
-        key = ["id", "width", "height", "x", "y"]
-        for i in range(len(args)):
-            setattr(self, key[i], args[i])
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+        """ update id, width, height, x and y, this order """
+        if args:
+            self.id = args[0] if len(args) >= 1 else self.id
+            self.width = args[1] if len(args) >= 2 else self.width
+            self.height = args[2] if len(args) >= 3 else self.height
+            self.x = args[3] if len(args) >= 4 else self.x
+            self.y = args[4] if len(args) >= 5 else self.y
+        else:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                elif key == "width":
+                    self.width = value
+                elif key == "height":
+                    self.height = value
+                elif key == "x":
+                    self.x = value
+                elif key == "y":
+                    self.y = value
+
+    def to_dictionary(self):
+        """ 13 return dict representation of a rectangle """
+        i = self.id
+        w = self.width
+        h = self.height
+        x = self.x
+        y = self.y
+        dic = {'id': i, 'width': w, 'height': h, 'x': x, 'y': y}
+        return dic
