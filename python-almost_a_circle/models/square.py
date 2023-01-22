@@ -9,11 +9,4 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Initializer for Square class"""
 
-        super().__init__(size, size, x, y, id)
-
-    def __str__(self):
-        """return string representation of Rectangle"""
-
-        return '[' + type(self).name + '] (' + str(self.id) \
-            + ') ' + str(self.x) + '/' + str(self.y) + ' - ' \
-            + str(self.size)        
+        super().__init__(size, size, x, y, id)        
