@@ -14,3 +14,14 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+def to_json_string(list_dictionaries):
+        """ 15 return json str of list of dicts """
+        if type(list_dictionaries) != list and list_dictionaries is not None:
+            raise TypeError
+        if not list_dictionaries or list_dictionaries is None:
+            return "[]"
+        for dic in list_dictionaries:
+            if type(dic) != dict:
+                raise TypeError
+        return json.dumps(list_dictionaries)
