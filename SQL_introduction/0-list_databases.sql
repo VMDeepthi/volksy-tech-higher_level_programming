@@ -1,0 +1,2 @@
+--lst databases
+SHOW DATABASES;
