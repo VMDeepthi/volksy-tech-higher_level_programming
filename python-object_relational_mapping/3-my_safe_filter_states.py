@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """safe filter"""
 
+
 import sys
 import MYSQLdb
 
