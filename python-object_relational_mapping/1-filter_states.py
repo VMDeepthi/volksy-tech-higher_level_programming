@@ -12,4 +12,3 @@ if __name__ == "__main__":
     for i in c:
         if i[1][0] == "N":
             print(i)
-
