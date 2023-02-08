@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Filter cities""""
+"""Filter cities"""
 
 
 import sys
